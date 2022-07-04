@@ -8,9 +8,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*
-        * This is a project where wqe will learn about networking , HTTP, OKHTTP and retrofit in Android
-        *
-        * */
+       //this is first commit in the philipretro branch
     }
 }
