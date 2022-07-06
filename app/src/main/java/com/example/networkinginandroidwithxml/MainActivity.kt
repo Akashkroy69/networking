@@ -9,7 +9,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         /*
-        *this branch is for codelab learning.
+        *  this branch is for codelab learning.
         * */
+
     }
 }
