@@ -9,8 +9,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         /*
-        * This is a project where wqe will learn about networking , HTTP, OKHTTP and retrofit in Android
-        *
+        *this branch is for codelab learning.
         * */
     }
 }
