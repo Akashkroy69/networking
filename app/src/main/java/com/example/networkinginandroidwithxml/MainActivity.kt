@@ -14,5 +14,11 @@ class MainActivity : AppCompatActivity() {
         val view = activityMainBinding.root
         setContentView(view)
 
+        //setting up RV with its adapter
+        val adapterForRV = AdapterForRV()
+        activityMainBinding.rvId.adapter = adapterForRV
+
+
+
     }
 }
