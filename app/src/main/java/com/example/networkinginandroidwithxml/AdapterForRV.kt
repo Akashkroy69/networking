@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.networkinginandroidwithxml.databinding.TodoLayoutForRvBinding
 
-//class AdapterForRV : RecyclerView.Adapter<AdapterForRV.ViewHolderRV>() {
+
+//class AdapterForRV : RecyclerView.Adapter<AdapterForRV.ViewHolderRV>(){
 class AdapterForRV : ListAdapter<Todo, AdapterForRV.ViewHolderRV>(DiffUtilCallback()) {
 
     class ViewHolderRV(private val binding: TodoLayoutForRvBinding) :

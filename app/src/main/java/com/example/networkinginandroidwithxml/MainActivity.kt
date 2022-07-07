@@ -2,12 +2,17 @@ package com.example.networkinginandroidwithxml
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.networkinginandroidwithxml.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    lateinit var activityMainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //this is first commit in the philipretro branch
 
-       //this is first commit in the philipretro branch
+        activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
+        val view = activityMainBinding.root
+        setContentView(view)
+
     }
 }
