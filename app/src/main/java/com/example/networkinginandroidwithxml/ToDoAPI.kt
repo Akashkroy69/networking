@@ -6,5 +6,5 @@ import retrofit2.http.GET
 interface ToDoAPI {
 
     @GET("/todos")
-    fun getToDos(): Response<List<Todo>>
+    suspend fun getToDos(): Response<List<Todo>>
 }
