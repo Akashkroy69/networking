@@ -8,6 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.networkinginandroidwithxml.databinding.ActivityMainBinding
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
+import java.io.IOException
 
 
 const val TAG = "MainActivity"
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             activityMainBinding.progressBarId.isVisible = true
             val response = try {
                 RetrofitInstance.api.getToDos()
-            } catch (e: java.io.IOException) {
+            } catch (e: IOException) {
                 Log.e(TAG, "onCreate:IOException, You might not have internet connection")
                 return@launch
             } catch (e: HttpException) {
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 return@launch
             }
             if (response.isSuccessful && response.body() != null) {
-                adapterForRV.submitList(response.body())
+                adapterForRV.todos = response.body()!!
             } else {
                 Log.e(TAG, "onCreate: response not successful")
             }
