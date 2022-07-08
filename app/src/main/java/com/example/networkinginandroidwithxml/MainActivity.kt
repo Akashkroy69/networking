@@ -37,9 +37,11 @@ class MainActivity : AppCompatActivity() {
                 RetrofitInstance.api.getToDos()
             } catch (e: java.io.IOException) {
                 Log.e(TAG, "onCreate:IOException, You might not have internet connection")
+                activityMainBinding.progressBarId.isVisible = false
                 return@launch
             } catch (e: HttpException) {
                 Log.e(TAG, "onCreate: HTTPException, Unexpected response")
+                activityMainBinding.progressBarId.isVisible = false
                 return@launch
             }
             if (response.isSuccessful && response.body() != null) {
@@ -47,6 +49,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Log.e(TAG, "onCreate: response not successful")
             }
+            activityMainBinding.progressBarId.isVisible = false
         }
 
 

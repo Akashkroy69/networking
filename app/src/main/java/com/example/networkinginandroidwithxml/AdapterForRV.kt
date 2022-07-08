@@ -38,7 +38,8 @@ class AdapterForRV : ListAdapter<Todo, AdapterForRV.ViewHolderRV>(DiffUtilCallba
 
     }
 
-    override fun getItemCount(): Int {
+    //We don't need to implement this method. ListAdapter has its own implementation for telling RV how many items are there.
+   /* override fun getItemCount(): Int {
         TODO("Not yet implemented")
-    }
+    }*/
 }
